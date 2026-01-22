@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* ===================================
+   MBTI 직업 추천 테스트 - 파스텔 테마
+   =================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #fdf4ff 0%, #f5f3ff 50%, #eff6ff 100%);
+  min-height: 100vh;
+}
+
+/* MBTI 선택 버튼 */
+.mbti-btn {
+  @apply px-4 py-3 rounded-2xl text-sm font-bold transition-all duration-300;
+  @apply bg-white text-gray-700 border-2 border-gray-100;
+  @apply hover:scale-105 hover:shadow-lg;
+  @apply active:scale-95;
+}
+
+.mbti-btn:hover {
+  @apply border-purple-300;
+}
+
+/* 결과 카드 */
+.result-card {
+  @apply bg-white rounded-3xl p-6 border border-gray-100;
+  @apply shadow-xl;
+}
+
+/* 직업 카드 */
+.career-card {
+  @apply bg-gradient-to-br from-white to-gray-50 rounded-2xl p-5;
+  @apply border border-gray-100 shadow-sm;
+  @apply hover:shadow-md transition-all duration-300;
+  @apply hover:-translate-y-1;
+}
+
+/* 복사 버튼 */
+.copy-btn {
+  @apply px-6 py-3 rounded-xl text-sm font-bold transition-all duration-200;
+  @apply bg-gradient-to-r from-violet-500 to-purple-600 text-white;
+  @apply hover:from-violet-600 hover:to-purple-700;
+  @apply active:scale-95 shadow-lg shadow-purple-200;
+}
+
+/* 토스트 알림 */
+.toast {
+  @apply fixed top-4 left-1/2 -translate-x-1/2 z-50;
+  @apply px-6 py-3 rounded-full;
+  @apply bg-gray-900 text-white text-sm font-medium;
+  @apply shadow-2xl;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* 그라데이션 텍스트 */
+.gradient-text {
+  @apply bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent;
+}
+
+/* MBTI 그룹 스타일 */
+.mbti-group {
+  @apply bg-white/80 backdrop-blur-sm rounded-2xl p-4;
+  @apply border border-gray-100;
+}
+
+.mbti-group-title {
+  @apply text-xs font-bold text-gray-400 mb-3 tracking-wider;
+}
+
+/* AI 위험도 배지 */
+.ai-badge {
+  @apply px-2 py-1 rounded-full text-xs font-bold;
+}
+
+/* 행운 아이템 카드 */
+.lucky-card {
+  @apply bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-5;
+  @apply border border-amber-200;
+}
+
+/* 조언 카드 */
+.advice-card {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-5;
+  @apply border border-blue-200;
+}
